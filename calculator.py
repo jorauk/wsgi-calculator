@@ -74,11 +74,17 @@ def divide(*args):
     return quotient
 
 def calculator():
-    body = ["<h1>List of books</h1>", '<ul>']
+    body = """
+        <h1>How to use the WSGI Calculator</h1>
+        <ol>
+            <li>To add two numbers x and y, append /add/x/y to this page's URL.</li>
+            <li>To subtract, /subtract/x/y.</li>
+            <li>To multiply and divide, /multiply/x/y and divide/x/y respectively.</li>
+        </ol>
+        <a href="/">Back to the list</a>
+    """
     
-    body.append('</ul>')
-    
-    return '\n'.join(body)
+    return body
     
     
 def resolve_path(path):
