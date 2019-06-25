@@ -94,6 +94,7 @@ def resolve_path(path):
     """
     
     funcs = {
+        '': calculator,
         'add': add,
         'subtract': subtract,
         'multiply': multiply,
