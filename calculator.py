@@ -47,12 +47,37 @@ def add(*args):
 
     # TODO: Fill sum with the correct value, based on the
     # args provided.
-    sum = "0"
+    sum = str(args[0] + args[1])
 
     return sum
 
-# TODO: Add functions for handling more arithmetic operations.
+def subtract(*args):
+    """ Returns a STRING with the sum of the arguments """
 
+    # TODO: Fill sum with the correct value, based on the
+    # args provided.
+    difference = str(args[0] - args[1])
+
+    return difference
+
+def multiply(*args):
+    """ Returns a STRING with the sum of the arguments """
+
+    # TODO: Fill sum with the correct value, based on the
+    # args provided.
+    product = str(args[0] * args[1])
+
+    return product
+    
+def divide(*args):
+    """ Returns a STRING with the sum of the arguments """
+
+    # TODO: Fill sum with the correct value, based on the
+    # args provided.
+    quotient = str(args[0] / args[1])
+
+    return quotient
+    
 def resolve_path(path):
     """
     Should return two values: a callable and an iterable of
