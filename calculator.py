@@ -49,29 +49,29 @@ import re
 def add(*args):
     """ Returns a STRING with the sum of the arguments """
 
-    sum = str(args[0] + args[1])
+    sum = int(args[0]) + int(args[1])
 
-    return sum
+    return str(sum)
 
 def subtract(*args):
     """ Returns a STRING with the difference of the arguments """
 
-    difference = str(args[0] - args[1])
+    difference = int(args[0]) - int(args[1])
 
-    return difference
+    return str(difference)
 
 def multiply(*args):
     """ Returns a STRING with the product of the arguments """
 
-    product = str(args[0] * args[1])
+    product = int(args[0]) * int(args[1])
 
-    return product
+    return str(product)
     
 def divide(*args):
     """ Returns a STRING with the quotient of the arguments """
-    quotient = str(args[0] / args[1])
+    quotient = int(args[0]) / int(args[1])
 
-    return quotient
+    return str(quotient)
 
 def calculator():
     body = """
