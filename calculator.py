@@ -76,24 +76,26 @@ def resolve_path(path):
     """
     
     funcs = {
-            '': books,
-            'book': book,
-        }
+        'add': add,
+        'subtract': subtract,
+        'multiply': multiply,
+        'divide': divide
+    }
         
-        path = path.strip('/').split('/')
+    path = path.strip('/').split('/')
+    
+    func_name = path[0]
+    args = path[1:]
+    
+    try:
+        func = funcs[func_name]
+    except KeyError:
+        raise NameError
         
-        func_name = path[0]
-        args = path[1:]
-        
-        try:
-            func = funcs[func_name]
-        except KeyError:
-            raise NameError
-            
-        return func, args
+    return func, args
 
 
-        return func, args
+    return func, args
 
 def application(environ, start_response):
     headers = [('Content-type', 'text/html')]
