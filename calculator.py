@@ -40,7 +40,11 @@ To submit your homework:
 
 
 """
+   
 
+import traceback
+import re
+   
 
 def add(*args):
     """ Returns a STRING with the sum of the arguments """
@@ -68,6 +72,14 @@ def divide(*args):
     quotient = str(args[0] / args[1])
 
     return quotient
+
+def calculator():
+    body = ["<h1>List of books</h1>", '<ul>']
+    
+    body.append('</ul>')
+    
+    return '\n'.join(body)
+    
     
 def resolve_path(path):
     """
