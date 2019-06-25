@@ -45,35 +45,26 @@ To submit your homework:
 def add(*args):
     """ Returns a STRING with the sum of the arguments """
 
-    # TODO: Fill sum with the correct value, based on the
-    # args provided.
     sum = str(args[0] + args[1])
 
     return sum
 
 def subtract(*args):
-    """ Returns a STRING with the sum of the arguments """
+    """ Returns a STRING with the difference of the arguments """
 
-    # TODO: Fill sum with the correct value, based on the
-    # args provided.
     difference = str(args[0] - args[1])
 
     return difference
 
 def multiply(*args):
-    """ Returns a STRING with the sum of the arguments """
+    """ Returns a STRING with the product of the arguments """
 
-    # TODO: Fill sum with the correct value, based on the
-    # args provided.
     product = str(args[0] * args[1])
 
     return product
     
 def divide(*args):
-    """ Returns a STRING with the sum of the arguments """
-
-    # TODO: Fill sum with the correct value, based on the
-    # args provided.
+    """ Returns a STRING with the quotient of the arguments """
     quotient = str(args[0] / args[1])
 
     return quotient
@@ -83,15 +74,26 @@ def resolve_path(path):
     Should return two values: a callable and an iterable of
     arguments.
     """
+    
+    funcs = {
+            '': books,
+            'book': book,
+        }
+        
+        path = path.strip('/').split('/')
+        
+        func_name = path[0]
+        args = path[1:]
+        
+        try:
+            func = funcs[func_name]
+        except KeyError:
+            raise NameError
+            
+        return func, args
 
-    # TODO: Provide correct values for func and args. The
-    # examples provide the correct *syntax*, but you should
-    # determine the actual values of func and args using the
-    # path.
-    func = add
-    args = ['25', '32']
 
-    return func, args
+        return func, args
 
 def application(environ, start_response):
     headers = [('Content-type', 'text/html')]
