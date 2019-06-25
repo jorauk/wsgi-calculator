@@ -79,7 +79,7 @@ def calculator():
         <ol>
             <li>To add two numbers x and y, append /add/x/y to this page's URL.</li>
             <li>To subtract, /subtract/x/y.</li>
-            <li>To multiply and divide, /multiply/x/y and divide/x/y respectively.</li>
+            <li>To multiply and divide, /multiply/x/y and /divide/x/y respectively.</li>
         </ol>
         <a href="/">Back to the list</a>
     """
